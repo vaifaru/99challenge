@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -55,9 +56,14 @@ public class PersonDetailActivity extends BaseActivity {
     private void initToolbar(Person person) {
         if (getSupportActionBar() != null) {
             image.setImageURI(person.getImage());
+
+            if (TextUtils.isEmpty(person.getImage())) {
+                collapsingToolbar.setExpandedTitleColor(getResources().getColor(android.R.color.white));
+            }
+
             collapsingToolbar.setTitle(person.getName());
-            //collapsingToolbar.setExpandedTitleColor(getResources().getColor(android.R.color.white));
             collapsingToolbar.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
+
             getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
