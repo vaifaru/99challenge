@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">99Challenge</string>
+    <string name="empty_bio">Sorry, but we don\'t have nothing about this person :(</string>
 </resources>

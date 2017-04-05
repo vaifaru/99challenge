@@ -2,6 +2,7 @@ package br.com.faru.a99challenge.presentation.person;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,7 @@ public class PersonDetailFragment extends Fragment implements PersonDetailContra
 
     @Override
     public void showInfo(Person person) {
-        bio.setText(person.getBio());
+        bio.setText(TextUtils.isEmpty(person.getBio()) ? getString(R.string.empty_bio) : person.getBio());
     }
 
 }
