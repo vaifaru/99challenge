@@ -8,7 +8,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import br.com.faru.a99challenge.model.Person;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 /**
@@ -20,7 +19,11 @@ public class PersonDetailPresenterTest {
     @Mock
     PersonDetailContract.View viewMock;
 
+    @Mock
+    Person person;
+
     PersonDetailPresenter presenter;
+
 
     @Before
     public void setup() {
@@ -30,7 +33,6 @@ public class PersonDetailPresenterTest {
 
     @Test
     public void shouldShowInfoWhenOnCreate() {
-        Person person = mock(Person.class);
         presenter.onCreate(person);
         verify(viewMock).showInfo(person);
     }

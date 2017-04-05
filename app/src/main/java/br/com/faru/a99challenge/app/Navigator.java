@@ -1,4 +1,4 @@
-package br.com.faru.a99challenge.util;
+package br.com.faru.a99challenge.app;
 
 
 import android.content.Context;
@@ -6,10 +6,11 @@ import android.content.Intent;
 
 import br.com.faru.a99challenge.model.Person;
 import br.com.faru.a99challenge.presentation.person.PersonDetailActivity;
+import br.com.faru.a99challenge.util.Constants;
 
-public class Navigation {
+public class Navigator {
 
-    public static void goToPerson(Context ctx, Person person) {
+    public static void toPersonDetail(Context ctx, Person person) {
         Intent intent = new Intent(ctx, PersonDetailActivity.class);
         intent.putExtra(Constants.PERSON, person);
         ctx.startActivity(intent);

@@ -27,6 +27,15 @@ public class PersonDetailFragment extends Fragment implements PersonDetailContra
 
     private Person person;
 
+    public static PersonDetailFragment newInstance(Person person) {
+        PersonDetailFragment fragment = new PersonDetailFragment();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(Constants.PERSON, person);
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,15 +53,6 @@ public class PersonDetailFragment extends Fragment implements PersonDetailContra
         presenter.onCreate(person);
 
         return view;
-    }
-
-    public static PersonDetailFragment newInstance(Person person) {
-        PersonDetailFragment fragment = new PersonDetailFragment();
-        Bundle bundle = new Bundle();
-        bundle.putParcelable(Constants.PERSON, person);
-        fragment.setArguments(bundle);
-
-        return fragment;
     }
 
     @Override
