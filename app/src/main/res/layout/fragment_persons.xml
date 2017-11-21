@@ -4,14 +4,14 @@
     android:layout_height="match_parent">
 
     <br.com.faru.a99challenge.presentation.widget.VerticalRecyclerView
-        android:id="@+id/list_view"
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="4dp"
         android:paddingTop="4dp" />
 
     <com.github.rahatarmanahmed.cpv.CircularProgressView
-        android:id="@+id/progress_view"
+        android:id="@+id/progressView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_gravity="center"

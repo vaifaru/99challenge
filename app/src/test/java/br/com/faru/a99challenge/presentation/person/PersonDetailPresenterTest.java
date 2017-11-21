@@ -33,7 +33,7 @@ public class PersonDetailPresenterTest {
 
     @Test
     public void shouldShowInfoWhenOnCreate() {
-        presenter.onCreate(person);
+        presenter.onActivityCreated(person);
         verify(viewMock).showInfo(person);
     }
 }

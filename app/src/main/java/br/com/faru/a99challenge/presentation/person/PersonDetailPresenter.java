@@ -18,7 +18,7 @@ public class PersonDetailPresenter implements PersonDetailContract.UserInteracti
     }
 
     @Override
-    public void onCreate(Person person) {
+    public void onActivityCreated(Person person) {
         view.showInfo(person);
     }
 

@@ -14,7 +14,7 @@ public interface PersonDetailContract {
 
         void setView(PersonDetailContract.View view);
 
-        void onCreate(Person person);
+        void onActivityCreated(Person person);
 
     }
 

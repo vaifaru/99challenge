@@ -39,13 +39,13 @@ public class PersonsPresenterTest {
 
     @Test
     public void shouldShowProgressOnCreate() {
-        presenter.onCreate();
+        presenter.onActivityCreated();
         verify(viewMock).setProgressIndicator(true);
     }
 
     @Test
     public void shouldGetPersonsOnCreate() {
-        presenter.onCreate();
+        presenter.onActivityCreated();
         verify(repositoryMock).getPersons(presenter);
     }
 
